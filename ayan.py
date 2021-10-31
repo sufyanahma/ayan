@@ -61,16 +61,17 @@ def log_menu():
     except (KeyError, IOError):
         os.system('clear')
         print(logo)
-                print("")
+                print(logo)
+		print("")
 		print(" \x1b[1;92m  \t(Login menu)")
-                print("")
-                print(47*"-")
-		print("\x1b[1;92m[1]\x1b[1;93m Login with id/Pass\n")
+		print("")
+		print(47*"-")
+		print("\x1b[1;92m[1]\x1b[1;93m Login with Facebook\n")
 		print("\x1b[1;92m[2]\x1b[1;93m Login with token \x1b[1;92m[BEST]\n")
 		print("\x1b[1;92m[3]\x1b[1;93m Back ")
 		print(47*"\x1b[1;92m-")
 		print("")
-		log_select()
+                log_select()
 def log_select():
 	sel = raw_input("\x1b[1;92m Choose option: ")
 	if sel =="1":
