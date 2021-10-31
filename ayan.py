@@ -60,7 +60,6 @@ def log_menu():
         menu()
     except (KeyError, IOError):
         os.system('clear')
-        print(logo)
                 print(logo)
 		print("")
 		print(" \x1b[1;92m  \t(Login menu)")
