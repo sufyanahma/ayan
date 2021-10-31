@@ -151,7 +151,6 @@ def menu():
     print("\x1b[1;92m            WELLCOME : "+name)
     print("")
     print(47*"-")
-    print("")
     print ' \x1b[1;92mLoggin in user: ' + z
     print ''
     print ' \x1b[1;93mActive token: ' + tok
