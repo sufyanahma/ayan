@@ -63,8 +63,6 @@ def log_menu():
         print(logo)
 		print("")
 		print(" \x1b[1;92m  \t(Login menu)")
-		print("")
-		print(47*"-")
 		print("\x1b[1;92m[1]\x1b[1;93m Login with id/Pass\n")
 		print("\x1b[1;92m[2]\x1b[1;93m Login with token \x1b[1;92m[BEST]\n")
 		print("\x1b[1;92m[3]\x1b[1;93m Back ")
