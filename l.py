@@ -93,8 +93,8 @@ print("\033[1;90m [2] B-API")
 print("")
 method_menu_select()
 def method_menu_select():
-afza = raw_input(" \033[1;909mChoose method: \033[0;97m")
-if afza =="2":
+select = raw_input(" \033[1;909mChoose method: \033[0;97m")
+if select =="2":
 b_menu()
 elif afza =="1":
 l_menu()
