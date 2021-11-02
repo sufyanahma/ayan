@@ -82,31 +82,7 @@ def step_main():
 		time.sleep(1)
 		step_main()
 		
-def main():
-	os.system("clear")
-print(logo)
-print("")
-print("\t \033[1;90mClone Method Menu\033[0;97m")
-print("")
-print("\033[1;90m [1] LOCALHOST/NOT WRKNG")
-print("\033[1;90m [2] B-API")
-print("")
-method_menu_select()
-def method_menu_select():
-select = raw_input(" \033[1;909mChoose method: \033[0;97m")
-if select =="2":
-b_menu()
-elif afza =="1":
-l_menu()
-else:
-print("")
-print("\t \033[1;31mSelect valid option \033[0;97m")
-print("")
-method_menu_select()
-def login():
-os.system("clear")
-print(logo)
-print("")
+
 print("\t "+c+"Login Menu"+c2)
 print("")
 print("\033[1;90m [1] Token login")
