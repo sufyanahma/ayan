@@ -17,97 +17,73 @@ birth = ['001', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'
 bd = random.randint(2e7, 3e7)
 sim = random.randint(2e4, 4e4)
 header = {'x-fb-connection-bandwidth': repr(bd), 'x-fb-sim-hni': repr(sim), 'x-fb-net-hni': repr(sim),'x-fb-connection-quality': 'EXCELLENT', 'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.3','x-fb-connection-type': 'unknown','content-type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger'}
-#MyLogo
-logo = """\033[1;96m
-\033[1;96m░██████╗██████╗░░░░░░██╗
-\033[1;96m██╔════╝██╔══██╗░░░░░██║
-\033[1;96m╚█████╗░██║░░██║░░░░░██║
-\033[1;96m░╚═══██╗██║░░██║██╗░░██║
-\033[1;96m██████╔╝██████╔╝╚█████╔╝
-\033[1;96m╚═════╝░╚═════╝░░╚════╝░
-
-\033[1;96m______________________________________________________
-
-\033[1;96m Author : SHAHZAIN DAVID JOIYA
-\033[1;96m Version : 3.0
-\033[1;96m Facebook : /HATERZKAABUUGZAINI2
-
-\033[1;96m______________________________________________________
-\033[1;96m______________________________________________________"""
-
-def reg():
-os.system("clear")
-print """\033[1;92m______________________________________________________"""
-jalan('\033[1;92m______________________________________________________')
-
-jalan('\033[1;92m░██████╗██████╗░░░░░░██╗')
-jalan('\033[1;92m██╔════╝██╔══██╗░░░░░██║')
-jalan('\033[1;92m╚█████╗░██║░░██║░░░░░██║')
-jalan('\033[1;92m░╚═══██╗██║░░██║██╗░░██║')
-jalan('\033[1;92m██████╔╝██████╔╝╚█████╔╝')
-jalan('\033[1;92m╚═════╝░╚═════╝░░╚════╝░')
-jalan('')
-jalan('\033[1;92m')
-
-jalan('\033[1;92m')
-
-jalan('\033[1;93m')
-jalan('\033[1;96m')
-jalan('\033[1;92m Author : SHAHZAIN DAVID')
-jalan('\033[1;92m Version : 3.0')
-jalan('\033[1;92m Facebook : /HATERZKAABUUGZAINI2')
-jalan('\033[1;82m')
-jalan('\033[1;96m')
-jalan('\033[1;92m______________________________________________________')
-jalan('\033[1;92m______________________________________________________')
-jalan('')
-jalan('\033[1;96m \033[1;96m USERNAME AND PASSWORD \033[1;96m ')
-jalan('')
-
-CorrectUsername = "SDJ"
-CorrectPassword = "BRAVO"
-
-loop = 'true'
-while (loop == 'true'):
-username = raw_input("\033[1;96m--->>>\x1b[1;96m(TOOL - USR)\x1b[1;96m<<<--- ")
-if (username == CorrectUsername):
-password = raw_input("\033[1;96m--->>>\x1b[1;96m(TOOL - PASS)\x1b[1;96m<<<---")
-if (password == CorrectPassword):
-print "Logged in successfully as " + username #SDJ
-loop = 'false'
-else:
-print "Wrong password!"
-os.system('xdg-open https://m.facebook.com/HATERZKAABUUGZAINI2')
-else:
-print "Wrong username!"
-os.system('xdg-open https://m.facebook.com/HATERZKAABUUGZAINI2')
-def reg():
-os.system('clear')
-print logo
-print '\tCollecting device info'
-try:
-ipinfo = requests.get('http://ip-api.com/json/')
-z = json.loads(ipinfo.text)
-ips = z['query']
-country = z['country']
-regi = z['regionName']
-network = z['isp']
-except:
-pass
-
-print '\x1b[1;92m Your ip: ' + ips
-time.sleep(1)
-print '\x1b[1;92m Your country: ' + country
-time.sleep(1)
-print '\x1b[1;92m Your region: ' + regi
-time.sleep(1)
-print ' \x1b[1;92mYour network: ' + network
-time.sleep(1)
-print ' Loading ...'
-time.sleep(1)
-method_menu()
-def method_menu():
-os.system("clear")
+logo = """
+\033[1;91m     $$$$$$\    $$$$$$\    $$$$$$\  
+\033[1;92m    $$  __$$\  $$  __$$\  $$  __$$\ 
+\033[1;93m    $$ /  \__| $$ /  $$ | $$ /  \__|
+\033[1;94m    \$$$$$$\   $$$$$$$$ | \$$$$$$\  
+\033[1;95m     \____$$\  $$  __$$ |  \____$$\ 
+\033[1;96m    $$\   $$ | $$ |  $$ | $$\   $$ |
+\033[1;97m    \$$$$$$  | $$ |  $$ | \$$$$$$  |
+\033[1;98m     \______/  \__|  \__|  \______/ 
+\033[1;93m----------------------------------------------------
+     Commond Owner Is Mr-SuFyaN Love Of AhMad
+\033[1;93m-----------------------------------------------------
+                                                                                                  \033[1;93m-----------------------------------------------------
+ \033[1;93m(*)\033[1;92m Developer: (SuFyaN AhMad ShabQadry)
+ \033[1;93m(*)\033[1;92m WhatsApp :   03489458276
+ \033[1;93m(*)\033[1;92m Facebook : https://www.facebook.com/Sufyan.shabqadry
+\033[1;93m-----------------------------------------------------
+"""
+def tool():
+	os.system("clear")
+	print("")
+	print(logo)
+	time.sleep(1)
+	print("First Put Tool Username...").center(50)
+	print("")
+	time.sleep(1)
+	username = raw_input("[!] Tool Username : ")
+	if username =="(sufyan)":
+		print("")
+		time.sleep(1)
+		print("\033[1;92mTool Username is correct").center(50)
+		print("")
+		time.sleep(1)
+		step_main()
+	else:
+		print("")
+		time.sleep(1)
+		print("\033[1;91mTool Username Is Invalid :) ").center(50)
+		print("")
+		time.sleep(1)
+		tool()
+def step_main():
+	os.system("clear")
+	print(logo)
+	print("")
+	time.sleep(1)
+	print("First Put Tool Password...").center(50)
+	print("")
+	time.sleep(1)
+	username = raw_input("[!] Tool Password : ")
+	if username =="(SAS)":
+		print("")
+		time.sleep(1)
+		print("\033[1;92mTool Password is correct").center(50)
+		print("")
+		time.sleep(1)
+		main()
+	else:
+		print("")
+		time.sleep(1)
+		print("\033[1;91mTool Password Is Invalid :) ").center(50)
+		print("")
+		time.sleep(1)
+		step_main()
+		
+def main():
+	os.system("clear")
 print(logo)
 print("")
 print("\t \033[1;90mClone Method Menu\033[0;97m")
