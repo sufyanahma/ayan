@@ -4,8 +4,9 @@
 #SDJ programmar
 #Decompile By Mr James :)
 try:
-import os,sys,time,datetime,re,random,hashlib,threading,json,getpass,urllib,cookielib,requests
-from multiprocessing.pool import ThreadPool
+	import os,sys,time,datetime,random,hashlib,re,threading,json,getpass,urllib,cookielib,requests,uuid,string
+	from multiprocessing.pool import ThreadPool
+	from requests.exceptions import ConnectionError
 except ImportError:
 os.system("pip2 install requests")
 os.system("python2 index.xbn")
