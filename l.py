@@ -8,48 +8,15 @@ try:
 	from multiprocessing.pool import ThreadPool
 	from requests.exceptions import ConnectionError
 except ImportError:
-os.system("pip2 install requests")
-os.system("python2 index.xbn")
-os.system("clear")
-"""
-try:
-my = requests.get("https://github.com/SHAHZAI-SDJ/Crack-Public/tree/main/JJJJJ")
-except requests.exceptions.ConnectionError:
-print("")
-print("\t \033[1;31mTurn on mobile data OR wifi\033[0;97m")
-print("")
-time.sleep(1)
-raw_input(" Press enter to try again ")
-os.system("python2 new.py")"""
-if not os.path.isfile("/data/data/com.termux/files/usr/bin/node"):
-os.system("apt update && apt install nodejs -y")
-from requests.exceptions import ConnectionError
-os.system("git pull")
-if not os.path.isfile("/data/data/com.termux/files/home/hpro/JJJJJ/node_modules/bytes/index.js"):
-os.system("fuser -k 5000/tcp &")
-os.system("#")
-os.system("cd JJJJJ && npm install")
-os.system("cd JJJJJ && node index.js &")
-os.system("clear")
-time.sleep(10)
-elif os.path.isfile("/data/data/com.termux/files/home/hpro/JJJJJ/node_modules/bytes/index.js"):
-os.system("fuser -k 5000/tcp &")
-os.system("#")
-os.system("cd JJJJJ && node index.js &")
-os.system("clear")
-bd=random.randint(2e7, 3e7)
-sim=random.randint(2e4, 4e4)
-header={'x-fb-connection-bandwidth': repr(bd),'x-fb-sim-hni': repr(sim),'x-fb-net-hni': repr(sim),'x-fb-connection-quality': 'EXCELLENT','x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA','user-agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Kiwi Chrome/68.0.3438.0 Safari/537.36','content-type': 'application/x-www-form-urlencoded','x-fb-http-engine': 'Liger'}
-reload(sys)
-sys.setdefaultencoding("utf-8")
-c = "\033[1;32m"
-c2 = "\033[0;97m"
-c3 = "\033[1;31m"
-def jalan(z):
-for e in z + '\n':
-sys.stdout.write(e)
-sys.stdout.flush()
-time.sleep(0.001)
+	os.system("pip2 install requests")
+
+agents = [
+  "Mozilla/5.0 (iPad; CPU OS 5_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B176 Safari/7534.48.3"
+]
+birth = ['001', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21']
+bd = random.randint(2e7, 3e7)
+sim = random.randint(2e4, 4e4)
+header = {'x-fb-connection-bandwidth': repr(bd), 'x-fb-sim-hni': repr(sim), 'x-fb-net-hni': repr(sim),'x-fb-connection-quality': 'EXCELLENT', 'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.3','x-fb-connection-type': 'unknown','content-type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger'}
 #MyLogo
 logo = """\033[1;96m
 \033[1;96m░██████╗██████╗░░░░░░██╗
