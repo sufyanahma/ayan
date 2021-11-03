@@ -193,7 +193,7 @@ def menu():
         time.sleep(1)
         login()
     os.system("clear")
-    	print(logo)
+    	print logo
         print("")
 	print "   \033[1;36;40m      ╔═════════════════════════════════╗"
 	print "   \033[1;36;40m      ║\033[1;32;40m[*] Name\033[1;32;40m: "+nama+"  	   \033[1;36;40m║"                               
