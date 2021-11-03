@@ -107,91 +107,223 @@ def login():
 		menu() 
 	except (KeyError,IOError):
 		os.system('clear')
-		print(logo)
-		print("")
-		print(" \x1b[1;92m  \t(Login menu)")
-		print("")
-		print(47*"-")
-		print("\x1b[1;92m[1]\x1b[1;93m Login with id/Pass\n")
-		print("\x1b[1;92m[2]\x1b[1;93m Login with token \x1b[1;92m[BEST]\n")
-		print("\x1b[1;92m[3]\x1b[1;93m Back ")
-		print(47*"\x1b[1;92m-")
-		print("")
-		log_select()
-def log_select():
-	sel = raw_input("\x1b[1;92m Choose option: ")
-	if sel =="1":
-		log_fb()
-	elif sel =="2":
-		token()
-	elif sel =="3":
-		ran()
-	else:
-		print("")
-		print("\tSelect valid option")
-		print("")
-		log_select()
-def log_fb():
+		print logo
+
+    print("")
+
+    print("\033[0;97m[ Login Main Menu ]").center(50)
+
+    print("")
+
+    print("\033[1;97m[1]\033[1;91m > \033[1;97mlogin using token")
+
+    print("")
+
+    print("\033[1;97m[2]\033[1;91m > \033[1;97mlogin using password")
+
+    print("")
+
+    print("\033[1;97m[3]\033[1;91m > \033[1;97mMain menu back")
+
+    print("")
+
+    login_select()
+
+def login_select():
+
+    Abdullah = raw_input(" \033[1;97mOption :\033[1;96m ")
+
+    if Abdullah =="1":
+
+        os.system("clear")
+
+        print logo
+
+        print("")
+
+	print("[ login with token ]").center(50)
+
+	print("")
+
+        token = raw_input("[!] Token ? \033[0;90m")
+
+        token_s = open(".fb_token.txt","w")
+
+        token_s.write(token)
+
+        token_s.close()
+
+        try:
+
+            r = requests.get("https://graph.facebook.com/me?access_token="+token)
+
+            q = json.loads(r.text)
+
+            name = q["name"]
+
+            nm = name.rsplit(" ")[0]
+
+            print("")
+
+            print("\033[1;92mYour token login successfully").center(50)
+
+            time.sleep(1)
+
+	    os.system("xdg-open https://https://www.facebook.com/https://www.facebook.com/hassanzebyarhussain")
+	
+
+	    time.sleep(1)
+
+            menu()
+
+        except (KeyError , IOError):
+
+            print("")
+
+            print("\033[1;91mToken invalid or account has checkpoint\033[0;97m").center(50)
+
+            print("")
+
+            time.sleep(2)
+
+            login()
+
+    elif Abdullah =="2":
+
+        login_fb()
+
+    elif Abdullah =="3":
+
+        main()
+
+    else:
+
+        print("")
+
+        print("Select a valid option").center(50)
+
+        print("")
+
+        login_select()
+
+def login_fb():
+
 	os.system("clear")
-	try:
-		token = open("access_token.txt", "r").read()
-		menu()
-	except (KeyError , IOError):
-		print(logo)
-		print("")
-		print("\tFacebook id/pass login")
-		print("")
-		uid = raw_input(" Uid: ")
-		passw = raw_input(" Password: ")
-		data = requests.get("https://b-api.facebook.com/method/auth.login?format=json&email="+uid+"&password="+passw+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&user-agent=Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J700F Build/MMB29K) [FBAN/Orca-Android;FBAV/181.0.0.12.78;FBPN/com.facebook.orca;FBLC/tr_TR;FBBV/122216364;FBCR/Turk Telekom;FBMF/samsung;FBBD/samsung;FBDV/SM-J700F;FBSV/6.0.1;FBCA/armeabi-v7a:armeabi;FBDM{density=3.0,width=900,height=1600}&cpl=true", headers=header).text
-		q = json.loads(data)
-		if "access_token" in q:
-			sav = open("access_token.txt", "w")
-			sav.write(q["access_token"])
-			sav.close()
-			menu()
-		elif "www.facebook.com" in q["error"]:
-			print("")
-			print("\tAccount has checkpoint")
-			print("")
-			time.sleep(1)
-			login()
-		else:
-			print("")
-			print("\tId/pass my be wrong")
-			print("")
-			time.sleep(1)
-def token():
-    os.system("clear")
-    try:
-        token = open("access_token.txt", "r").read()
-        menu()
-    except(KeyError , IOError):
-        print(logo)
-        
-        token = raw_input        ("\x1b[1;93m Paste token :\x1b[1;92m ")
-        sav = open("access_token.txt", "w")
-        sav.write(token)
-        sav.close()
-        login()
+
+	print logo
+
+	print("")
+
+	print("[ login with password ]").center(50)
+
+	print("")
+
+        id = raw_input("[!] \033[1;93m Email/ID/Number :\033[1;97m ")
+
+        id1 = id.replace(' ','')
+
+        id2 = id1.replace('(','')
+
+        uid = id2.replace(')','')
+
+        pwd = raw_input("[!] \033[1;93m Passwor :\033[1;97m ")
+
+        print("")
+
+        data = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email="+uid+"&locale=en_US&password="+pwd+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
+
+        q = json.loads(data)
+
+        if "access_token" in q:
+
+            login_s = open(".login.txt","w")
+
+            login_s.write(q["access_token"])
+
+            login_s.close()
+
+            print("\t\033[1;92mLogin Successfull\033[0;97m")
+
+            time.sleep(1)
+
+            menu()
+
+        else:
+
+            if "www.facebook.com" in q["error_msg"]:
+
+                print ("\n\033[1;91m[!] Login Failed . Account Has a Checkpoint\033[0;97m")
+
+                time.sleep(1)
+
+                login_fb()
+
+            else:
+
+                print("\n\033[1;91m[!] Login Failed.Email/ID/Number OR Password May BE Wrong\033[0;97m")
+
+                time.sleep(1)
+
+                login_fb()		
+
+
+
 def menu():
+
+    global token
+
     os.system("clear")
+
+    print logo
+
     try:
-        token = open("access_token.txt", "r").read()
-    except(KeyError , IOError):
+
+        token = open(".fb_token.txt","r").read()
+
+    except (KeyError , IOError):
+
         login()
+
     try:
+
         r = requests.get("https://graph.facebook.com/me?access_token="+token)
+
         q = json.loads(r.text)
-        name = q["name"]
-    except(KeyError):
-        print(logo)
+
+        nm = q["name"]
+
+        nmf = nm.rsplit(" ")[0]
+
+        ok = nmf
+
+    except (KeyError , IOError):
+
         print("")
-        print("\tLogged in token has expired")
-        os.system("rm -rf access_token.txt")
+
+        print("login account has checkpoint").center(50)
+
         print("")
+
+        os.system("rm -rf .fb_token.txt")
+
         time.sleep(1)
+
         login()
+
+    except requests.exceptions.ConnectionError:
+
+        print logo
+
+        print("")
+
+        print("Your internet connection failed").center(50)
+
+        print("")
+
+        time.sleep(2)
+
+        menu()
+
     os.system("clear")
     	print logo
         print("")
